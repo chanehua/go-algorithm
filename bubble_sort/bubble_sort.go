@@ -4,12 +4,12 @@ import (
 	"fmt"
 )
 
-func bubbleSort(arr []int) {
-	arrLastIndex := len(arr) - 1
-	for i := 0; i < arrLastIndex; i++ {
-		for j := 1; j < arrLastIndex-i; j++ {
-			if arr[j-1] > arr[j] {
-				arr[j-1], arr[j] = arr[j], arr[j-1]
+func bubbleSort(data []int) {
+	dataLastIndex := len(data) - 1
+	for i := 0; i < dataLastIndex; i++ {
+		for j := 1; j < dataLastIndex-i; j++ {
+			if data[j-1] > data[j] {
+				data[j-1], data[j] = data[j], data[j-1]
 			}
 		}
 	}
@@ -17,8 +17,8 @@ func bubbleSort(arr []int) {
 }
 
 func main() {
-	arr := []int{5, 1, 4, 2, 8}
-	fmt.Printf("not sort: %v \n", arr)
-	bubbleSort(arr)
-	fmt.Printf("sorted: %v \n", arr)
+	data := []int{5, 1, 4, 2, 8}
+	fmt.Printf("not sort: %v \n", data)
+	bubbleSort(data)
+	fmt.Printf("sorted: %v \n", data)
 }
